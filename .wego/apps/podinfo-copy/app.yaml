@@ -1,0 +1,14 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    wego.weave.works/app-identifier: wego-54dcf4f1dd0c4ac9019d4e513b0ae39e
+  name: podinfo-copy
+  namespace: wego-system
+spec:
+  branch: master
+  deployment_type: kustomize
+  path: ./kustomize
+  source_type: git
+  url: ssh://git@github.com/luizbafilho/podinfo-copy.git

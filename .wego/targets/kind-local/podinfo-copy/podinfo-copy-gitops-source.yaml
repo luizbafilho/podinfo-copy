@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: podinfo-copy
+  namespace: wego-system
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  secretRef:
+    name: wego-kind-local-podinfo-copy
+  url: ssh://git@github.com/luizbafilho/podinfo-copy.git
+
